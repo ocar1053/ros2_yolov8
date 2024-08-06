@@ -11,7 +11,7 @@ class pokemon_cameraNode(Node):
         super().__init__('pokemon_cameraNode')
         self.get_logger().info('Camera Node is running')
         self.publisher_ = self.create_publisher(Image, 'camera_topic', 10)
-        self.cap = cv2.VideoCapture(1)
+        self.cap = cv2.VideoCapture(0)
         self.bridge = CvBridge()
         timer_period = 0.1
         self.timer = self.create_timer(timer_period, self.timer_callback)
