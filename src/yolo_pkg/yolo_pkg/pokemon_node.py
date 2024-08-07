@@ -14,7 +14,7 @@ class PokemonNode(Node):
         self.get_logger().info('Pokemon Node is running')
         self.bridge = CvBridge()
         self.current_dir = os.path.dirname(os.path.realpath(__file__))
-        self.model_path = os.path.join(self.current_dir, 'resource', 'best.pt')
+        self.model_path = os.path.join(self.current_dir, '../','resource', 'best.pt')
         self.model = YOLO(self.model_path)
         self.subscription = self.create_subscription(
             Image,
